@@ -19,17 +19,10 @@ def main():
     # This will solve the board, measure the time it takes to do so,
     # print the board to the screen with the time taken to execute.
     startTime = time.time()
-    solveBoard(board)
+    fillBlankSpaces(board, 0, 0)
     completionTime = "{:.5f}".format(time.time() - startTime)
     print(f"Completed in {completionTime} seconds.")
     printBoard(board)
-
-
-def solveBoard(board):
-    # This program mutates the import board rather than creating a new one.
-    # This is to optimise the space complexity.
-    fillBlankSpaces(board, 0, 0)
-    return board
 
 
 def fillBlankSpaces(board, row, col):
